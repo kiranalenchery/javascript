@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function square(){
+    //   let num = 2
+    //   let sq = num*num
+    //   console.log(sq)
+    // }
+    // square()
+
+
+
+    function addTwoNumbers(numOne,numTwo){
+      // let numOne = 10
+      // let numTwo = 20
+      let sum = numOne + numTwo
+
+      console.log(sum)//return sum
+    }
+    addTwoNumbers(23,25)//console.log(addTwoNumbers)
+
+
+
+    function printFullName(){
+      let firstName = 'Asasjcnj'
+      let secondName = 'Yetsvhjm'
+      let space = ' '
+      let fullName = firstName + space + secondName
+      return fullName
+    }
+    console.log(printFullName())
+
+
+    function areaOfCircle(r){
+      let area = Math.PI * r * r
+      return area
+    }
+    console.log(areaOfCircle(15))
+
+
+
+
+    function square(number){
+      return number*number
+    }
+
+    console.log(square(10))
+  
+    function sumTwoNumbers(num1, num2){
+      let sum = num1 + num2
+      console.log(sumTwoNumbers(sum))
+    }
+    sumTwoNumbers(10,20)
+
+    function printName(nameOne, nameTwo){
+      return `${nameOne} ${nameTwo}`
+    }
+    console.log(printName('gfcrcg', 'ghdswasdfy'))
+
+
+
+    function sumArray(arr){
+      let sum = 0
+      for(let i=0;i<arr.length;i++){
+        sum = sum + arr[i]
+      }
+      return sum
+    }
+    const arr = [12,33,4,12]
+    console.log(sumArray(arr))
+
+    const areaCircle = (radius)=>{
+      let area = Math.PI + radius * radius
+      return area;
+    }
+    console.log(areaCircle(10))
+
+
+    function sumAllNum(){
+      console.log(arguments)
+    }
+
+    sumAllNum(1,2,3,4)
+
+
+    function sumAllNums(){
+      let sum =0
+      for(let i = 0;i < arguments.length;i++){
+        sum += arguments[i]
+      }
+    }
+
+    
+  </script>
+</body>
+</html>

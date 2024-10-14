@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const url = 'https://restcountries.com/v2/all'; // API URL
+
+    fetch(url)
+      .then(response => response.json()) 
+      .then(data => {
+        data.forEach(country => {
+          console.log(`Country: ${country.name}`);
+          console.log(`Capital: ${country.capital}`);
+          console.log(`Languages: ${country.languages.map(lang => lang.name).join(', ')}`);
+          console.log(`Population: ${country.population}`);
+          console.log(`Area: ${country.area} km²`);
+          console.log('------------------------');
+        });
+      })
+      .catch(error => console.error(error)); 
+
+      const url ='https://api.thecatapi.com/v1/breeds'; 
+      let catNames = []; 
+
+      fetch(url)
+        .then(response => response.json()) 
+        .then(data => {
+          catNames = data.map(cat => cat.name);
+          console.log(catNames);
+        })
+        .catch(error => console.error(error)); 
+        
+
+        
+  </script>
+</body>
+</html>

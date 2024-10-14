@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+const text = 'He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses per month.';
+
+const amounts = text.match(/\d+/g);
+
+const monthlySalary = parseInt(amounts[0], 10); 
+const annualBonus = parseInt(amounts[1], 10);   
+const monthlyCoursesIncome = parseInt(amounts[2], 10); 
+
+
+const totalAnnualIncome = (monthlySalary * 12) + annualBonus + (monthlyCoursesIncome * 12);
+
+console.log(`Total Annual Income: ${totalAnnualIncome} euros`);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const person = {
+      firstName : 'Kiran',
+      age : 22,
+      country : 'Finland',
+      skills: ['HTML', 'CSS', 'JS'],
+      title: 'teacher',
+      address: {
+        street: 'Heitamienkatu 16',
+        pobox: 2002,
+        city: 'Helsinki'
+      },
+      getPersonInfo: function(){
+        return `I am ${this.firstName} and I live in ${this.country}.`
+      }
+    }
+
+    const copyPerson = Object.assign({}, person)
+    console.log(copyPerson)
+
+    const key = Object.keys(copyPerson)
+    console.log(key)
+    const address = Object.keys(copyPerson.address)
+    console.log(address)
+
+    const values = Object.values(copyPerson)
+    console.log(values)
+
+    const entries = Object.entries(copyPerson)
+    console.log(entries)
+
+    console.log(copyPerson.hasOwnProperty('firstName'))
+    console.log(copyPerson.hasOwnProperty('score'))
+    
+  </script>
+</body>
+</html>

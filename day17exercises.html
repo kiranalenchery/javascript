@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // localStorage.clear()
+    // localStorage.setItem('firstName','Kiran')
+    // localStorage.setItem('lastName', 'P A')
+    // localStorage.setItem('age', 22)
+    // localStorage.setItem('country', 'India')
+    // localStorage.setItem('city', 'kochi')
+
+    // console.log(localStorage)
+
+    // // first name, last name, age, skills, country, enrolled keys 
+
+    // const student = {
+    //   fistName : 'Kiran',
+    //   lastName : 'P A',
+    //   age : 22,
+    //   skills : ['HTML', 'CSS', 'JS', 'REACT'],
+    //   country : 'India',
+    //   city : 'Kochi',
+    //   enrolled : true
+    // }
+
+    // const studentJson = JSON.stringify(student)
+    // localStorage.setItem('student', studentJson)
+    // console.log(localStorage)
+
+        class PersonAccount {
+        constructor(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.incomes = new Set();
+            this.expenses = new Set();
+        }
+
+        addIncome(amount, description) {
+            this.incomes.add({ amount, description });
+        }
+
+        addExpense(amount, description) {
+            this.expenses.add({ amount, description });
+        }
+
+        totalIncome() {
+            let total = 0;
+            for (let income of this.incomes) {
+                total += income.amount;
+            }
+            return total;
+        }
+
+        totalExpense() {
+            let total = 0;
+            for (let expense of this.expenses) {
+                total += expense.amount;
+            }
+            return total;
+        }
+
+        accountInfo() {
+            return `Account for: ${this.firstName} ${this.lastName}\n` +
+                  `Total Income: $${this.totalIncome()}\n` +
+                  `Total Expenses: $${this.totalExpense()}\n` +
+                  `Balance: $${this.accountBalance()}`;
+        }
+
+        accountBalance() {
+            return this.totalIncome() - this.totalExpense();
+        }
+
+        saveToLocalStorage() {
+            const data = {
+                firstName: this.firstName,
+                lastName: this.lastName,
+                incomes: Array.from(this.incomes),
+                expenses: Array.from(this.expenses)
+            };
+            localStorage.setItem('personAccount', JSON.stringify(data));
+        }
+
+        static loadFromLocalStorage() {
+            const data = localStorage.getItem('personAccount');
+            if (data) {
+                const parsedData = JSON.parse(data);
+                const account = new PersonAccount(parsedData.firstName, parsedData.lastName);
+                parsedData.incomes.forEach(income => account.addIncome(income.amount, income.description));
+                parsedData.expenses.forEach(expense => account.addExpense(expense.amount, expense.description));
+                return account;
+            }
+            return null;
+        }
+    }
+
+    
+    const personAccount = new PersonAccount("John", "Doe");
+    personAccount.addIncome(1000, "Salary");
+    personAccount.addExpense(300, "Rent");
+    personAccount.saveToLocalStorage();
+
+    
+    const loadedAccount = PersonAccount.loadFromLocalStorage();
+    if (loadedAccount) {
+        console.log(loadedAccount.accountInfo());
+    } else {
+        console.log("No account data found in localStorage.");
+    }
+
+  </script>
+</body>
+</html>

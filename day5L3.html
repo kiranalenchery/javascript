@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
+// Sort the array
+ages.sort((a, b) => a - b);
+
+const minAge = ages[0];
+const maxAge = ages[ages.length - 1];
+
+console.log("Sorted ages:", ages);
+console.log("Min age:", minAge);
+console.log("Max age:", maxAge);
+
+
+
+
+const middle = Math.floor(ages.length / 2);
+
+let medianAge;
+
+if (ages.length % 2 === 0) {
+    medianAge = (ages[middle - 1] + ages[middle]) / 2;
+} else {
+    medianAge = ages[middle];
+}
+
+console.log("Median age:", medianAge);
+
+
+
+
+const total = ages.reduce((sum, age) => sum + age, 0);
+const averageAge = total / ages.length;
+
+console.log("Average age:", averageAge);
+
+
+
+
+const range = maxAge - minAge;
+
+console.log("Range of ages:", range);
+
+
+
+const minAverageDifference = Math.abs(minAge - averageAge);
+const maxAverageDifference = Math.abs(maxAge - averageAge);
+
+console.log("Min - Average:", minAverageDifference);
+console.log("Max - Average:", maxAverageDifference);
+
+
+
+
+import countries from './countries.js';
+
+const firstTenCountries = countries.slice(0, 10);
+
+console.log("First ten countries:", firstTenCountries);
+
+
+
+
+const middleCountryIndex = Math.floor(countries.length / 2);
+
+let middleCountry;
+
+if (countries.length % 2 === 0) {
+    middleCountry = countries.slice(middleCountryIndex - 1, middleCountryIndex + 1);
+} else {
+    middleCountry = [countries[middleCountryIndex]];
+}
+
+console.log("Middle country(ies):", middleCountry);
+
+
+
+
+let firstHalf;
+let secondHalf;
+
+if (countries.length % 2 === 0) {
+    firstHalf = countries.slice(0, middleCountryIndex);
+    secondHalf = countries.slice(middleCountryIndex);
+} else {
+    firstHalf = countries.slice(0, middleCountryIndex + 1);
+    secondHalf = countries.slice(middleCountryIndex + 1);
+}
+
+console.log("First half:", firstHalf);
+console.log("Second half:", secondHalf);
+
+
+
+
+
+  </script>
+</body>
+</html>

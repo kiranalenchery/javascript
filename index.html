@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>This is the first paragraph.</p>
+    <p id="para2">This is the second paragraph.</p>
+    <p id="para3">This is the third paragraph.</p>
+    <p>This is another paragraph without id.</p>
+
+    <script>
+
+    const firstParagraph = document.querySelector('p');
+    console.log('First Paragraph:', firstParagraph.textContent);
+
+    
+    const secondParagraph = document.querySelector('#para2');
+    const thirdParagraph = document.querySelector('#para3');
+
+    console.log('Second Paragraph:', secondParagraph.textContent);
+    console.log('Third Paragraph:', thirdParagraph.textContent);
+
+    
+    const paragraphs = document.querySelectorAll('p');
+    console.log('All Paragraphs as NodeList:', paragraphs);
+
+    
+    paragraphs.forEach((paragraph, index) => {
+        console.log(`Paragraph ${index + 1}: ${paragraph.textContent}`);
+    });
+
+    
+    paragraphs[3].textContent = 'Fourth Paragraph';
+    console.log('Updated Fourth Paragraph:', paragraphs[3].textContent);
+
+    
+    paragraphs.forEach((paragraph, index) => {
+        
+        paragraph.setAttribute('id', `para${index + 1}`);
+
+        
+        paragraph.className = `paragraph-${index + 1}`;
+    });
+
+    console.log('Updated Paragraph IDs and Classes:');
+    paragraphs.forEach(paragraph => {
+        console.log(`ID: ${paragraph.id}, Class: ${paragraph.className}`);
+    });
+
+      
+    </script>
+</body>
+</html>

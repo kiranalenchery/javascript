@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const skills = ["JavaScript", "Python", "Java"];
+    const skillsJSON = JSON.stringify(skills);
+    console.log(skillsJSON);
+
+    const age = 25;
+    const ageJSON = JSON.stringify(age);
+    console.log(ageJSON);
+
+    const isMarried = false;
+    const isMarriedJSON = JSON.stringify(isMarried);
+    console.log(isMarriedJSON);
+
+    const student = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 25,
+        skills: ["JavaScript", "Python"]
+    };
+    const studentJSON = JSON.stringify(student);
+    console.log(studentJSON);
+
+
+    const students = [
+        {
+            firstName: "John",
+            lastName: "Doe",
+            age: 25,
+            skills: ["JavaScript", "Python"]
+        },
+        {
+            firstName: "Jane",
+            lastName: "Smith",
+            age: 22,
+            skills: ["Java", "C#"]
+        }
+    ];
+
+    const filteredStudents = students.map(student => ({
+        firstName: student.firstName,
+        lastName: student.lastName,
+        skills: student.skills
+    }));
+
+    const filteredStudentsJSON = JSON.stringify(filteredStudents);
+    console.log(filteredStudentsJSON);
+
+
+    const txt = '{"firstName": "John", "lastName": "Doe", "skills": ["JavaScript", "Python", "Java"]}';
+    const parsedObject = JSON.parse(txt);
+    console.log(parsedObject);
+
+
+    const users = [
+        { firstName: "John", lastName: "Doe", skills: ["JavaScript", "Python", "Java"] },
+        { firstName: "Jane", lastName: "Smith", skills: ["Java", "C#", "Ruby", "Go"] },
+        { firstName: "Alice", lastName: "Johnson", skills: ["HTML", "CSS"] }
+    ];
+
+    const userWithMostSkills = users.reduce((prev, curr) => 
+        (prev.skills.length > curr.skills.length) ? prev : curr
+    );
+
+    console.log(userWithMostSkills);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const countries = [
+    {
+        name : 'India',
+        capital : 'Delhi',
+        population : 1300000000
+    },
+    {
+      name : 'America',
+      capital : 'Washington DC',
+      population : 300000000
+    },
+    {
+      name : 'England',
+      capital : 'London',
+      population : 100000000
+    }
+  ]
+  for (const [name,capital,population] of countries){
+    console.log(name,capital,population)
+  }
+
+  const student = ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]];
+
+  const [name, skills, [, , jsScore, reactScore]] = student;
+
+  console.log(name, skills, jsScore, reactScore);
+
+
+  </script>
+</body>
+</html>

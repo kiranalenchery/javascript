@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const newSet = new Set()
+    for (let i = 0; i<=10; i++){
+      newSet.add(i)
+    }
+    newSet.delete(0)
+    console.log(newSet)
+    newSet.clear()
+
+    const str = ['apple', 'orange', 'mango', 'pineapple', 'grape']
+    const fruits = new Set(str)
+    console.log(fruits)
+
+    
+  </script>
+</body>
+</html>

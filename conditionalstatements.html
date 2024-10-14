@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let num = 3
+    if (num > 0){
+      console.log(`${num} is a positive number`)
+    }
+
+    let isRaining = false
+    if (isRaining){
+      console.log('It is raining')
+    }
+    else{
+      console.log('Not raining')
+    }
+    let num1 = 2
+    if (num1 > 0){
+      console.log('Is positive')
+    }
+    else if(num<0){
+      console.log('Is negative')
+    }
+    else{
+      console.log('Number is zero')
+    }
+
+    let weather = 'sunny'
+    if (weather == 'rainy'){
+      console.log('You Need a raincoat')
+    }
+    else if(weather == 'sunny'){
+      console.log("Go out freely")
+    }
+    else {
+      console.log("No need for raincoat")
+    }
+    // let dayUserInput = prompt('What day is today?')
+    // let day = dayUserInput.toLowerCase
+    // switch (day){
+    //   case 'subday':
+    //     console.log('Today is Sunday')
+    //     break
+    //   case 'monday':
+    //     console.log('Today is Monday')
+    //     break
+    //     case ;tuesday:
+    //     console.log('Today is Tuesday')
+    //     break
+    //     case 'wednesday':
+    //     console.log('Today is Wednesday')
+    //     break
+    //     case 'thursday':
+    //     console.log('Today is Tursday')
+    //     break
+    //     case 'friday':
+    //     console.log('Today is Friday')
+    //     break
+    //     case 'saturday':
+    //     console.log('Today is Saturday')
+    //     break
+    //     default:
+    //       console.log('Error')
+    //   }
+
+    // let num = prompt('Enter number');
+    // switch (true){
+    //   case num>0:
+    //     console.log('Number is postive');
+    //     break;
+    //   case num==0:
+    //     console.log('Number is zero')
+    //   case num<0:
+    //     console.log('Number is negative')
+    //   default:
+    //     console.log('error')  
+    // }
+    // let isSunny = true
+
+    // isSunny ? console.log("No need for raincoat") : console.log("Might meed raincoat")
+
+    let Myage = prompt('What is your age?')
+
+    if (Myage > 18){
+      console.log("You are old enough to drive")
+    }
+    else {
+      let left = 18 - Myage
+      console.log(`You are left with ${left} years`)
+    }
+
+    let Yourage = prompt('What is your friends age?')
+
+    if(Myage == Yourage){
+      console.log('You and your friend are of same age ')
+    }
+    else if(Myage>Yourage){
+      let diff = Myage - Yourage
+      console.log(`You are older than your friend by ${diff} years`)
+    }
+    else{
+      let dif = Yourage-Myage
+      console.log(`You are younger than your friend by ${dif} years`)
+    }
+
+  </script>
+</body>
+</html>

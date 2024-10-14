@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log("For Loop 0 to 10:");
+for (let i = 0; i <= 10; i++) {
+  console.log(i);
+}
+
+
+console.log("\nWhile Loop 0 to 10:");
+let i = 0;
+while (i <= 10) {
+  console.log(i);
+  i++;
+}
+
+console.log("\nDo While Loop 0 to 10:");
+i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i <= 10);
+
+console.log("\nFor Loop 10 to 0:");
+for (let i = 10; i >= 0; i--) {
+  console.log(i);
+}
+
+console.log("\nWhile Loop 10 to 0:");
+i = 10;
+while (i >= 0) {
+  console.log(i);
+  i--;
+}
+
+console.log("\nDo While Loop 10 to 0:");
+i = 10;
+do {
+  console.log(i);
+  i--;
+} while (i >= 0);
+
+console.log("\nFor Loop 0 to n:");
+let n = 5;
+for (let i = 0; i <= n; i++) {
+  console.log(i);
+}
+
+
+console.log("\nPattern with #:");
+let pattern = '';
+for (let i = 1; i <= 7; i++) {
+  pattern += '#';
+  console.log(pattern);
+}
+
+console.log("\nMultiplication pattern:");
+for (let i = 0; i <= 10; i++) {
+  console.log(`${i} x ${i} = ${i * i}`);
+}
+
+
+console.log("\n i    i^2   i^3 pattern:");
+console.log(" i   i^2  i^3");
+for (let i = 0; i <= 10; i++) {
+  console.log(`${i}    ${i ** 2}    ${i ** 3}`);
+}
+
+
+console.log("\nEven numbers from 0 to 100:");
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
+
+
+console.log("\nOdd numbers from 0 to 100:");
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
+}
+
+
+console.log("\nSum of all numbers from 0 to 100:");
+let sum = 0;
+for (let i = 0; i <= 100; i++) {
+  sum += i;
+}
+console.log(`The sum of all numbers from 0 to 100 is ${sum}.`);
+
+
+console.log("\nSum of all evens and odds from 0 to 100:");
+let sumEvens = 0;
+let sumOdds = 0;
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 === 0) {
+    sumEvens += i;
+  } else {
+    sumOdds += i;
+  }
+}
+console.log(`The sum of all evens from 0 to 100 is ${sumEvens}.`);
+console.log(`The sum of all odds from 0 to 100 is ${sumOdds}.`);
+
+
+console.log("\nSum of evens and odds as array:");
+let sumArray = [sumEvens, sumOdds];
+console.log(sumArray);
+
+  </script>
+</body>
+</html>

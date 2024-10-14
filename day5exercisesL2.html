@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+let text = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.';
+let words = text.replace(/[^\w\s]/g, '').split(' ');
+
+console.log(words);
+console.log(words.length); // 13
+
+
+
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+
+// Add 'Meat' at the beginning
+if (!shoppingCart.includes('Meat')) {
+    shoppingCart.unshift('Meat');
+}
+
+// Add 'Sugar' at the end
+if (!shoppingCart.includes('Sugar')) {
+    shoppingCart.push('Sugar');
+}
+
+// Remove 'Honey' if allergic
+const isAllergic = true; // Change this value if you're not allergic
+if (isAllergic) {
+    const honeyIndex = shoppingCart.indexOf('Honey');
+    if (honeyIndex !== -1) {
+        shoppingCart.splice(honeyIndex, 1);
+    }
+}
+
+// Modify 'Tea' to 'Green Tea'
+const teaIndex = shoppingCart.indexOf('Tea');
+if (teaIndex !== -1) {
+    shoppingCart[teaIndex] = 'Green Tea';
+}
+
+console.log(shoppingCart);
+
+
+
+
+if (countries.includes('Ethiopia')) {
+    console.log('ETHIOPIA');
+} else {
+    countries.push('Ethiopia');
+}
+
+  
+
+
+if (webTechs.includes('Sass')) {
+    console.log('Sass is a CSS preprocess.');
+} else {
+    webTechs.push('Sass');
+    console.log(webTechs);
+}
+
+
+
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux'];
+const backEnd = ['Node', 'Express', 'MongoDB'];
+
+const fullStack = frontEnd.concat(backEnd);
+
+console.log(fullStack);
+
+  </script>
+</body>
+</html>

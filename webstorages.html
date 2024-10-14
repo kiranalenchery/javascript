@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const skills = ['HTML', 'CSS', 'JS', 'React']
+
+    // const skillsJason = JSON.stringify(skills, undefined, 4)
+    // localStorage.setItem('skills', skillsJason)
+    // console.log(localStorage)
+
+    let skills = [
+      {tech: 'HTML', level: 10},
+      {tech: 'CSSL', level: 9},
+      {tech: 'JS', level: 8},
+      {tech: 'React', level: 8},
+      {tech: 'Redux', level: 10},
+      {tech: 'Node', level: 7},
+      {tech: 'MongoDB', level: 9}
+    ]
+
+    let skillJSON = JSON.stringify(skills)
+    localStorage.setItem('skills', skillJSON)
+    console.log(localStorage)
+
+    skill = localStorage.getItem('skills')
+
+    console.log(skill)
+
+  </script>
+</body>
+</html>

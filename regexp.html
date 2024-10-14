@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let pattern = 'love'
+    // let regExp = new RegExp(pattern)
+    // console.log(regExp)
+
+    // let pattern2 = 'love'
+    // let flag = 'gi'
+    // let regexp = new RegExp(pattern2, flag)
+    // console.log(regexp)
+
+    // const str = 'I love Javascript'
+    // const pattern = /love/
+    // const result = pattern.test(str)
+    // console.log(result)
+
+  //   let str = 'I love JavaScript'
+  //   let pattern = /love/g
+  //   const result = pattern.match(str)
+  //   console.log(result)
+
+  // const str = 'I Love Javascript'
+  // const pattern = /love/i
+  // const result = str.search(pattern)
+  // console.log(result)
+
+  // const txt = 'Python is the most beautiful language that a human begin has ever created.\
+  // I recommend python for a first programming language'
+
+  // matchReplaced = txt.replace(/Python|python/g, 'JavaScript') // i can be used inted of using an uppercase and lower case python.
+  // console.log(matchReplaced)
+
+
+  
+  // const txt2 = '%I a%m te%%a%%che%r% a%n%d %% I l%o%ve te%ach%ing.\
+  // T%he%re i%s n%o%th%ing as m%ore r%ewarding a%s e%duc%at%i%ng a%n%d e%m%p%ow%er%ing \
+  // p%e%o%ple.\
+  // I fo%und te%a%ching m%ore i%n%t%er%%es%ting t%h%an any other %jobs.\
+  // D%o%es thi%s m%ot%iv%a%te %y%o%u to b%e a t%e%a%cher.'
+
+  // matches = txt2.replace(/%/g, '')
+  // console.log(matches)
+  
+  // const pattern2 = '[Aa]pple' // this square bracket means either A or a
+  // const txt3 = 'Apple and banana are fruits. An old cliche says an apple a day keeps the  doctor way has been replaced by a banana a day keeps the doctor far far away. '
+  // const match = txt3.match(pattern2)
+
+  // console.log(match)  
+
+
+  // const pattern = /[Aa]pple/g 
+  // const txt = 'Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away. '
+  // const matches = txt.match(pattern)
+
+  // const pattern = /[Aa]pple|[Bb]anana/g 
+  // const txt = 'Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away. Banana is easy to eat too.'
+  // const matches = txt.match(pattern)
+
+  // console.log(matches)  
+
+  const pattern = /\d/g
+  const txt = 'This regular expression example was made in January 12,  2020.'
+  const matches = txt. match(pattern)
+
+  console.log(matches)  
+  
+  const pattern = /\d+/g
+  const txt = 'This regular expression example was made in January 12,  2020.'
+  const matches = txt. match(pattern)
+
+  console.log(matches)
+  
+  const pattern = /\d+/g
+  const txt = 'This regular expression example was made in January 12,  2020.'
+  const matches = txt. match(pattern)
+  console.log(matches)  
+
+  const pattern = /[a].+/g   
+  const txt = 'Apple and banana are fruits'
+  const matches = txt.match(pattern)
+
+  console.log(matches)   
+
+  const txt = 'This regular expression example was made in December 6,  2019.'
+  const pattern = /\\b\w{4}\b/g  //  exactly four character words
+  const matches = txt.match(pattern)
+  console.log(matches)  //['This', 'made', '2019']
+  const txt = 'This regular expression example was made in December 6,  2019.'
+  const pattern = /\b[a-zA-Z]{4}\b/g  //  exactly four character  words without numbers
+  const matches = txt.match(pattern)
+  console.log(matches)  //['This', 'made']
+  const txt = 'This regular expression example was made in December 6,  2019.'
+  const pattern = /\d{4}/g  // a number and exactly four digits
+  const matches = txt.match(pattern)
+  console.log(matches)  // ['2019']
+  const txt = 'This regular expression example was made in December 6,  2019.'
+  const pattern = /\d{1,4}/g   // 1 to 4
+  const matches = txt.match(pattern)
+  console.log(matches)  // ['6', '2019']
+
+  const txt = 'This regular expression example was made in December 6,  2019.'
+  const pattern = /^This/ // ^ means starts with
+  const matches = txt.match(pattern)
+  console.log(matches)  
+
+
+  const txt = 'This regular expression example was made in December 6,  2019.'
+  const pattern = /[^A-Za-z,. ]+/g  // ^ in set character means negation, not A to Z, not a to z, no space, no comma no period
+  const matches = txt.match(pattern)
+  console.log(matches)  // ["6", "2019"]
+  
+
+  let pattern = /^[A-Z][a-z]{3,12}$/
+  let name = 'Asabeneh'
+  let result = pattern.test(name)
+  console.log(result)
+ </script>
+</body>
+</html>

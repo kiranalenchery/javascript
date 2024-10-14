@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let string = 'Welcome to Mern Stack'
+
+    console.log(string.includes('to'))
+    console.log(string.includes('welcome'))
+    console.log(string.includes('Mern'))
+    console.log(string.includes('stack'))
+
+
+    let country = 'Finland'
+    console.log(country.replace('Fin', 'Vin'))
+
+    console.log(string.charAt(4))
+    console.log(string.charAt(11))
+
+    console.log(string.charCodeAt(18))
+    let lastindex = string.length - 1
+
+    console.log(string.charCodeAt(lastindex))
+
+    console.log(string.indexOf('M'))
+    console.log(string.indexOf('stack'))
+    console.log(string.indexOf('Welcome'))
+    
+
+    let string2 = 'I love JavaScript. If you dont love JavaScript what else can you love.'
+    console.log(string.lastIndexOf('love'))
+
+    console.log(country.startsWith('Fin'))
+
+    console.log(country.endsWith('land'))
+
+    console.log(string.search('Mern'))
+    console.log(string2.search(/javascript/gi))
+    console.log(string2.match('JavaScript'))
+
+    let num = '10'
+    let numInt = parseInt(num)
+    console.log(typeof numInt)
+
+    let num2 = '9.81'
+
+    let numFloat = Number(num2)
+
+    console.log(typeof numFloat)
+
+  </script>
+</body>
+</html>

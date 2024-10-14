@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //   const promise1 = new Promise((resolve) => setTimeout(() => resolve(2),2000));
+    //   const promise2 = new Promise((resolve) => setTimeout(() => resolve(2), 1000));
+    //   const promise3 = Promise.reject(new Error('Rejected'));
+
+    //   Promise.all([promise1, promise2, promise3])
+    //     .then(values => console.log(values))
+    //     .catch(error => console.error(error.message));
+    // const promise1=new Promise((resolve)=>{
+    //     setTimeout(()=>{
+    //         return resolve("promise1")
+    //     },1000)
+    //   })
+      
+    //   const promise2=new Promise((resolve,reject)=>
+    //   {
+    //     resolve("promise2")
+
+
+    //   })
+    //   const promise3=new Promise((resolve,reject)=>{
+    //      return resolve("  promise3")
+    //   })
+    
+       
+   
+
+    //   Promise.all([promise1,promise2,promise3])
+    //   .then((res)=>{
+    //     console.log(res)
+    //   })
+    //   .catch(err=>console.log(err))
+
+    // const promise1=new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //         resolve("promise1")
+    //     },2000)
+    //   })
+    //   const promise2=new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //         reject("promise2 reject")
+    //     },1000)
+    //   })
+
+    //   Promise.race([promise1,promise2])
+    //   .then((res)=>{
+    //     console.log(res)
+    //   })
+    //   .catch(err=>console.log(err))
+
+    const promise1 = new Promise((resolve, reject) => setTimeout(() => reject('Promise 1 rejected'), 1000));
+    const promise2 = Promise.reject('Promise 2 rejected');
+    const promise3 = new Promise((resolve) => setTimeout(() => resolve(3), 500));
+
+    Promise.any([promise1, promise2, promise3])
+      .then(value => console.log(value))
+      .catch(errors => console.error(errors));
+
+  </script>
+</body>
+</html>

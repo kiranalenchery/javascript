@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const anonymousFun = fumction(){
+    //   console.log('This is an anonymous function')
+    // }
+    // anonymousFun()
+
+    // const square = function(n){
+    //   return n*n
+    // }
+    // console.log(square(2))
+
+//     (function(n) {
+//   console.log(n * n)
+// })(2) // 4, but instead of just printing if we want to return and store the data, we do as shown below
+
+let squaredNum = (function(n) {
+  return n * n
+})(10)
+
+console.log(squaredNum)
+
+const square = n => n*n
+console.log(square(5))
+
+const changeToUpper = arr =>{
+  const newArr = []
+  for(const element of arr){
+    newArr.push(element.toUpperCase())
+  }
+  return newArr
+}
+
+const countries = ['Finland','America','Albania','Netherlands']
+console.log(changeToUpper(countries))
+
+
+
+const printFullName = (firstName,lastName) => {
+  return `${firstName} ${lastName}`
+}
+
+console.log(printFullName('James','Hernandez'))
+
+
+// // syntax
+// // Declaring a function
+// function functionName(param = value) {
+//   //codes
+// }
+
+// // Calling function
+// functionName()
+// functionName(arg)
+
+
+// function greetings(name = 'Pete'){
+//   let message = `${name}, welocme to 30 days JavaScript`
+//   return message
+// }
+
+// console.log(greetings())
+// console.log(greetings('Dave'))
+
+
+// function generateFullname(firstName = 'Logan', lastName='Harves'){
+//   let space = " "
+//   let fullName =firstName+space+lastName
+//   return fullName 
+
+// }
+// console.log(generateFullname())
+// console.log(generateFullname('Sachin', 'Tendulkar'))
+
+// function calculateAge(birthYear, currentYear = 2024) {
+//   let age = currentYear - birthYear
+//   return age
+// }
+
+// console.log('Age: ', calculateAge(1438))
+
+// function weightOfObject(mass , gravity=9.81){
+//   let weight = mass * gravity
+//   return weight
+// }
+
+// console.log(weightOfObject(33))
+
+
+const weightOfObject = (mass, gravity=9.81)
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function fullName(){
+    //   let firstName = 'Kiran'
+    //   let lastName = 'P A'
+    //   console.log(`${firstName} ${lastName}`)
+    // }
+    // fullName()
+
+
+    function fullName(firstName, lastName){
+      return `${firstName} ${lastName}`
+    }
+    console.log(fullName('Kiran','P A'))
+
+
+    function addNum(a,b){
+      let sum = a + b
+      return sum
+
+    }
+
+    console.log(addNum(10,87654))
+
+
+
+    function areaRect(len, wid){
+      let area = len * wid
+      return area
+    }
+    console.log(areaRect(34,87))
+
+
+
+    function periOfRect(length,bredth){
+      let peri = 2*(length + bredth)
+      return peri 
+    }
+    console.log(periOfRect(22,134))
+
+
+    function vol(length, width, height){
+      let volume = length * width * height
+      return volume
+    }
+    console.log(vol(34, 76, 99))
+
+
+
+    function areaOfCircle(r){
+      let area = Math.PI * r * r
+      return area
+    }
+    console.log(areaOfCircle(43))
+
+
+
+
+    function circumfrenceOfCircle(r){
+      let circum = Math.PI * 2 * r
+      return circum
+    }
+    console.log(circumfrenceOfCircle(4))
+
+
+
+    function density(mass, volume) {
+  return mass / volume;
+    }
+
+  console.log(density(100, 10)); // Example usage, replace with mass and volume
+
+
+function speed(distance, time) {
+  return distance / time;
+}
+
+console.log(speed(100, 2)); 
+
+function weight(mass, gravity = 9.81) {
+  return mass * gravity;
+}
+
+console.log(weight(70));
+
+
+function convertCelsiusToFahrenheit(oC) {
+  return (oC * 9/5) + 32;
+}
+
+console.log(convertCelsiusToFahrenheit(30));
+
+function calculateBMI(weight, height) {
+  const bmi = weight / (height * height);
+  if (bmi < 18.5) {
+    return `Underweight: BMI is ${bmi.toFixed(1)}`;
+  } else if (bmi >= 18.5 && bmi <= 24.9) {
+    return `Normal weight: BMI is ${bmi.toFixed(1)}`;
+  } else if (bmi >= 25 && bmi <= 29.9) {
+    return `Overweight: BMI is ${bmi.toFixed(1)}`;
+  } else {
+    return `Obese: BMI is ${bmi.toFixed(1)}`;
+  }
+}
+
+console.log(calculateBMI(70, 1.75));
+
+function checkSeason(month) {
+  const lowerMonth = month.toLowerCase();
+  switch (lowerMonth) {
+    case "september":
+    case "october":
+    case "november":
+      return "Autumn";
+    case "december":
+    case "january":
+    case "february":
+      return "Winter";
+    case "march":
+    case "april":
+    case "may":
+      return "Spring";
+    case "june":
+    case "july":
+    case "august":
+      return "Summer";
+    default:
+      return "Invalid month";
+  }
+}
+
+console.log(checkSeason("April"));
+
+function findMax(a, b, c) {
+  let max = a;
+  if (b > max) {
+    max = b;
+  }
+  if (c > max) {
+    max = c;
+  }
+  return max;
+}
+
+console.log(findMax(0, 10, 5));  // Output: 10
+console.log(findMax(0, -10, -2)); // Output: 0
+  </script>
+</body>
+</html>

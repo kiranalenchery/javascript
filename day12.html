@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="section">Hello World</h1>
+  <h2 class="section-1">MERN</h2>
+    <h2 class="">Python</h2>
+
+  <script>
+    document.getElementById('section').innerHTML='hello';
+    document.getElementsByClassName('section-1')[0].innerHTML='MERN STACK';
+    document.getElementsByTagName('h2')[0].innerHTML='PYTHON STACK';
+    document.getElementsByTagName('h2')[1].innerHTML='PYTHON STACK';
+
+    var item = document.getElementById('section')
+
+    item.innerHTML='hello world'
+
+    var items=document.getElementsByClassName('section-1')[0]
+
+    items.innerHTML='MEAN STACK'
+
+    var tag = document.getElementsByTagName('h2')[1]
+    tag.innerHTML='Angularjs'
+
+    item.style.color='red'
+    item.style.fontSize='45px'
+    item.style.backgroundColor='blue'
+    item.style.display='none'
+
+    let numOne = '3'
+
+    let numTwo = 3
+
+    console.log(numOne==numTwo)
+
+    let js='javascript'
+    let py='python'
+
+    console.log(js==py)
+
+    let a=2
+    let b=5
+
+    console.log(a+b)
+
+    let lightOn=true
+    let lightOff=false
+
+    console.log(lightOn==lightOff)
+
+    let num=[1,2,3,4]
+    let nums=[1,2,3,4]
+
+    console.log(num==nums)
+
+    let userOne = {
+      name : 'kiran',
+      role : 'sde',
+      country : 'ind',
+    }
+
+    let userTwo = {
+      name : 'kiran',
+      role : 'sde',
+      country : 'ind',
+    }
+
+    console.log(userOne==userTwo)
+    
+    
+    </script>
+</body>
+</html>

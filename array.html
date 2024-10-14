@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const arr=[]
+    // console.log(arr.length)
+    // const num=[1,45,3,22,67,76,44,999]
+    // console.log(num.length)
+    // const fruits=['apple','lemon','grape','orange']
+    // console.log(fruits.length)
+    // const array=[
+    //     'fasdtf',
+    //     876,
+    //     {country: 'Finland',city:'amsterdam'},
+    //     {skills: ['JavaScript','HTML','CSS']}
+    // ]
+    // console.log(array)
+    
+    // console.log(array.length)
+
+    // let str='JavaScript'
+    // const charInJavaScript=str.split('')
+    // console.log(charInJavaScript)
+
+    // let companies='Facebook, Nividia, Amazon, Oracle, Netflix, Spotify'
+    // const companyNames=companies.split(',')
+    // console.log(companyNames)
+
+    // let text = 'I love teaching and empowering people. I want to help people chase their dreams and reach the heights they are inted to.'
+
+    // const words = text.split(' ')
+    // console.log(words)
+
+    // let firstFruit = fruits[0]
+    // console.log(firstFruit)
+    
+    // let secondFruit = fruits[1]
+    // console.log(secondFruit)
+
+    // let lastIndex = fruits.length-1
+    // let lastFruit = fruits[lastIndex]
+    // console.log(lastFruit)
+
+    // let web =[
+    //   'HTML',
+    //   'CSS',
+    //   'React',
+    //   'Angular',
+    //   'Express',
+    //   'Nodejs',
+    //   'MongoDB'
+    // ]
+    // console.log(web)
+    // console.log(web[1])
+    // let len = web.length
+    // console.log(web[len-1])
+
+    // const countries = ['Albenia',
+    //   'America',
+    //   'India',
+    //   'Columbia',
+    //   'Japan',
+    //   'France',
+    //   'Kenya'
+    // ]
+    // countries[0]='Afganisthan'
+    // countries[1]='Brazil'
+    // lastIndex=countries.length-1
+    // countries[lastIndex]='Korea'
+    // console.log(countries)
+
+    // const arr = Array()
+    // console.log(arr)
+
+    // const empltyValues = Array(8).fill('X')
+    // console.log(empltyValues)
+
+    // firstList=[1,2,3,4]
+    // secondList=[5,6,7,8,9,10]
+    // thirdlist=firstList.concat(secondList)
+    // console.log(thirdlist)
+
+    // const numbers=[1,2,3,4,5,6,7]
+    // console.log(numbers.indexOf(9))
+    // console.log(numbers.indexOf(2))
+    // console.log(numbers.indexOf(5))
+
+    const fruits =['Bananna', 'Apple', 'Orange','Watermelon']
+    let index = fruits.indexOf('Bananna')
+
+    // if(index==-1){
+    //   console.log('This fruit does not exits here')
+    // }
+    // else{
+    //   console.log('this fruit extits here')
+    // }
+
+    index==-1?console.log('This fruit does not exist here'):console.log('this fruit exits here')
+
+    const numbers=[1,2,3,4,5,3,1,2,4]
+
+    console.log(numbers.lastIndexOf(2))
+    console.log(numbers.lastIndexOf(6))
+    console.log(numbers.lastIndexOf(1))
+
+    console.log(numbers.includes(7))
+    console.log(numbers.includes(4))
+    console.log(numbers.includes(5))
+    console.log(numbers.includes(0))
+
+    console.log(Array.isArray(numbers))
+
+    const number = 100
+    console.log(Array.isArray(number))
+
+    console.log(numbers.toString())
+
+    const names =['Messi','Ronaldo','Rooney','Zlatan']
+    console.log(names.toString())
+
+
+    console.log(numbers.join())
+    console.log(names.join())
+    console.log(names.join(''))
+    console.log(names.join(' '))
+    console.log(names.join(', '))
+    console.log(names.join('#'))
+
+    console.log(numbers.slice())
+
+    names.push('Neymar')
+    names.push('Mbappe')
+    names.pop()
+    names.shift()
+    names.unshift('Halland')
+    names.reverse()
+    names.sort()
+    console.log(names)
+
+    const firstNum = [1,2,3,4]
+    const secondNum = [1,4,5,6]
+
+    const arrayOfArray = [[1,2,3,4],[1,4,5,6]]
+    console.log(arrayOfArray)
+
+    const frontEnd = ['HTML','CSS','JS','React','Redux']
+    const backEnd = ['Node','Express','MongoDB']
+    const fullStack = [frontEnd,backEnd]
+    console.log(fullStack)
+    console.log(fullStack.length)
+    console.log(fullStack[0])
+    console.log(fullStack[1])
+    
+
+
+
+  </script>
+</body>
+</html>

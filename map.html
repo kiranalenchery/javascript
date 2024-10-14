@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const map = new Map()
+    console.log(map)
+    countries = [
+    ['Finland', 'Helsinki'],
+    ['Sweden', 'Stockholm'],
+    ['Norway', 'Oslo'],
+  ]
+  const map2 = new Map(countries)
+  console.log(map2)
+  console.log(map2.size)
+
+  const countriesMap = new Map()
+  console.log(countriesMap.size) 
+  countriesMap.set('Finland', 'Helsinki')
+  countriesMap.set('Sweden', 'Stockholm')
+  countriesMap.set('Norway', 'Oslo')
+  console.log(countriesMap)
+  console.log(countriesMap.size)
+
+
+  console.log(countriesMap.get('Finland'))
+  console.log(countriesMap.has('Helsinki'))
+
+  for (const country of countriesMap){
+    console.log(country)
+  }
+
+  for (const [county , city] of countriesMap){
+    console.log(county,city)
+  }
+  </script>
+</body>
+</html>

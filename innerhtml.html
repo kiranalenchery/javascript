@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Asabeneh Yetayeh challenges in 2020</h1>
+    <h2>30DaysOfJavaScript Challenge</h2>
+    <ul></ul>
+  </div>
+
+
+  <script>
+    const lists =`
+    <li>30daysOfPython Challenge done</li>
+    <li>30daysOfPython Challenge ongoing</li>
+    <li>30daysOfPython Challenge Coming</li>
+    <li>30daysOfPython Challenge Coming</li>
+    <li>30daysOfPython Challenge Coming</li>
+    <li>30daysOfPython Challenge Coming</li>
+    <li>30daysOfPython Challenge Coming</li>`
+    const ul = document.querySelector('ul')
+    ul.innerHTML = lists
+
+    const titles = document.querySelectorAll('h1')
+    titles.forEach((title, i) => {
+      title.style.fontSize = '24px' // all titles will have 24px font size
+      if (i % 2 === 0) {
+        title.style.color = 'white'
+        title.style.backgroundColor = 'red'
+      } else {
+        title.style.color = 'red'
+        title.style.backgroundColor = 'green'
+      }
+    })
+  </script>
+
+
+</body>
+</html>

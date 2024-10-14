@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let str = 'JavaScript'
+    console.log(str.length)
+    console.log(str.toUpperCase())
+    let str2 = 'MERNSTACK'
+    console.log(str2.toLowerCase)
+    let str3 = "Hello World! This is a test.";
+    let firstSpaceIndex = str3.indexOf(" ");
+    let result = str3.substring(firstSpaceIndex + 1);
+    console.log(result);
+    let str4 = "30 Days Of JavaScript";
+    let result2 = st4r.substr(0, 3) + str4.substr(17);
+    console.log(result2);
+    console.log(str.includes('Script'))
+    console.log(str3.slice(' '))
+    console.log(str4.split(' '))
+    let companies = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
+    let result = companies.split(', ');
+    console.log(result); 
+    let str = "30 Days Of JavaScript";
+    let newStr = str.replace("JavaScript", "Python");
+    let charAt15 = str.charAt(15);
+    console.log(charAt15); 
+    console.log(newStr); 
+    let charAt15 = str.charAt(15);
+    console.log(charAt15); 
+    let charCodeJ = str.charCodeAt(11);
+    console.log(charCodeJ);
+    let firstIndexA = str.indexOf('a');
+    console.log(firstIndexA);
+    let lastIndexA = str.lastIndexOf('a');
+    console.log(lastIndexA); 
+    let sentence = "You cannot end a sentence with because because because is a conjunction";
+    let firstIndexBecause = sentence.indexOf('because');
+    console.log(firstIndexBecause);
+    let lastIndexBecause = sentence.lastIndexOf('because');
+    console.log(lastIndexBecause); 
+    let searchIndexBecause = sentence.search('because');
+    console.log(searchIndexBecause);
+    let strWithWhitespace = ' 30 Days Of JavaScript ';
+    let trimmedStr = strWithWhitespace.trim();
+    console.log(trimmedStr); 
+    let startsWith30 = str.startsWith('30');
+    console.log(startsWith30);
+    let endsWithJavaScript = str.endsWith('JavaScript');
+    console.log(endsWithJavaScript);
+    let matchesA = str.match(/a/g);
+    console.log(matchesA); 
+    let part1 = "30 Days of";
+    let part2 = " JavaScript";
+    let mergedStr = part1.concat(part2);
+    console.log(mergedStr);
+    let repeatedStr = str.repeat(2);
+    console.log(repeatedStr);
+    
+  </script>
+</body>
+</html>

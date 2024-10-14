@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function outerFunction(){
+      let count = 0
+      function innerFunction(){
+        count ++ 
+        return count 
+      }
+      return innerFunction
+    }
+    const innerFunc = outerFunction()
+
+    console.log(innerFunc())
+    console.log(innerFunc())
+    console.log(innerFunc())
+    console.log(innerFunc())
+    
+  </script>
+</body>
+</html>
